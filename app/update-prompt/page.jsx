@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import Form from "@components/Form";
 
-const UpdatePrompt = () => {
+export default function UpdatePrompt() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const promptId = searchParams.get("id");
@@ -61,6 +61,4 @@ const UpdatePrompt = () => {
             handleSubmit={updatePrompt}
         />
     );
-};
-
-export default UpdatePrompt;
+}
