@@ -1,14 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
 
 const Feed = () => {
     const [allPosts, setAllPosts] = useState([]);
-
-    const [searchText, setSearchText] = useState("");
-    const [searchTimeout, setSearchTimeout] = useState(null);
-    const [searchedResults, setSearchedResults] = useState([]);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -21,15 +17,9 @@ const Feed = () => {
         fetchPosts();
     }, []);
 
-    const filterPrompts = (searchtext) => {
-        const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
-        return allPosts.filter(
-            (item) =>
-                regex.test(item.creator.username) ||
-                regex.test(item.tag) ||
-                regex.test(item.prompt)
-        );
-    };
+    const [searchText, setSearchText] = useState("");
+    const [searchedResults, setSearchedResults] = useState([]);
+    const [searchTimeout, setSearchTimeout] = useState(null);
 
     const handleSearchChange = (e) => {
         clearTimeout(searchTimeout);
@@ -41,6 +31,16 @@ const Feed = () => {
                 const searchResult = filterPrompts(e.target.value);
                 setSearchedResults(searchResult);
             }, 500)
+        );
+    };
+
+    const filterPrompts = (searchText) => {
+        const regex = new RegExp(searchText, "i"); // Case-insensitive search
+        return allPosts.filter(
+            (item) =>
+                regex.test(item.creator.username) || // Checks username
+                regex.test(item.prompt) || // Checks prompt
+                regex.test(item.tag) // Checks tag
         );
     };
 
