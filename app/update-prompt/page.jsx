@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import Form from "@components/Form";
 
-export default function UpdatePrompt() {
+const UpdatePrompt = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const promptId = searchParams.get("id");
@@ -15,13 +15,19 @@ export default function UpdatePrompt() {
 
     useEffect(() => {
         const getPromptDetails = async () => {
-            const response = await fetch(`/api/prompt/${promptId}`);
-            const data = await response.json();
-
-            setPost({
-                prompt: data.prompt,
-                tag: data.tag,
-            });
+            try {
+                const response = await fetch(`/api/prompt/${promptId}`);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch prompt details");
+                }
+                const data = await response.json();
+                setPost({
+                    prompt: data.prompt,
+                    tag: data.tag,
+                });
+            } catch (error) {
+                console.error("Error fetching prompt details:", error);
+            }
         };
 
         if (promptId) getPromptDetails();
@@ -61,4 +67,6 @@ export default function UpdatePrompt() {
             handleSubmit={updatePrompt}
         />
     );
-}
+};
+
+export default UpdatePrompt;
