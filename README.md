@@ -35,8 +35,56 @@ Basically, I have developed a Next.js application that highlights the key featur
 ## Screenshots
 
 ### Home Page
-![Home Page](Screenshot%202024-10-08%20190313.png)
+![Home Page](Screenshot%202024-10-08%20190241.png)
 
 ### Profile Page
-![Profile Page](Screenshot%202024-10-08%20190241.png)
+![Profile Page](Screenshot%202024-10-08%20190313.png)
+
+🤸 **Quick Start**  
+Get your project up and running locally by following these steps:
+
+### Prerequisites
+Before you start, ensure you have the following installed on your machine:
+
+- **Git**
+- **Node.js**
+- **npm** (Node Package Manager)
+
+### Cloning the Repository
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/chandanmaheshwari753/Promptopia.git
+```
+
+### Installation
+Next, install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+### Set Up Environment Variables
+Create a new file named `.env` in the root of your project and add the following content:
+
+```plaintext
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=
+GOOGLE_ID=
+GOOGLE_CLIENT_SECRET=
+MONGODB_URI=
+```
+
+Make sure to replace the placeholder values with your actual credentials. You can obtain these credentials by signing up on the corresponding websites like Google Cloud Console, Cryptpool (for a random Auth Secret), and MongoDB.
+
+### Running the Project
+Finally, start the project with:
+
+```bash
+npm run dev
+```
+
+Open your browser and go to **http://localhost:3000** to see your project in action!
+
 
