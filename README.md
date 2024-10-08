@@ -35,8 +35,8 @@ Basically, I have developed a Next.js application that highlights the key featur
 ## Screenshots
 
 ### Home Page
-![Home Page](file-9Cxw3amjmPzMXfWD3unmdtu5)
+![Home Page](Screenshot%202024-10-08%20190313.png)
 
 ### Profile Page
-![Profile Page](file-9HB3z08xMUXtFl97XzA7ftXt)
+![Profile Page](Screenshot%202024-10-08%20190241.png)
 
