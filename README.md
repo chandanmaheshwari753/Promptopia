@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Promptopia
 
-## Getting Started
+Promptopia is a Next.js-based platform designed for users to share and explore AI-generated prompts. Whether you're someone looking to create or just explore ideas, this platform allows you to contribute your prompts and view others' creations from across the globe.
 
-First, run the development server:
+Basically, I have developed a Next.js application that highlights the key features of Next.js along with a comprehensive CRUD AI Prompt sharing system utilizing a MongoDB database and implementing NextAuth authentication.
+
+### ⚙️ Tech Stack
+- Next.js
+- MongoDB
+- NextAuth
+- TailwindCSS
+
+# Features
+
+- **✨ Modern Design with Glassmorphism Style**: Enjoy a sleek and trendy look that embraces the glassmorphism aesthetic, giving the app a fresh and modern feel.
+
+- **🔍 Discover & Share AI Prompts**: Dive into a world of community-shared AI prompts and unleash your creativity by contributing your own for everyone to explore.
+
+- **✏️ Edit & Delete Your Prompts**: Flexibility at your fingertips! Easily tweak your prompts anytime or remove them when they're no longer needed.
+
+- **👤 Personalized Profile Page**: Each user gets a unique profile page that highlights all the prompts they've crafted, showcasing their contributions to the community.
+
+- **🌍 Explore Fellow Creators**: Check out other users' profiles to see the fantastic prompts they've shared, building a vibrant community of creators.
+
+- **📋 Copy to Clipboard**: Instantly copy AI prompts with a handy "Copy to Clipboard" feature, making it a breeze to save ideas for later use.
+
+- **🏷️ Tag-Based Prompt Search**: Effortlessly find prompts related to specific topics by searching through designated tags, simplifying your quest for inspiration.
+
+- **🔐 Secure Google Authentication**: Enjoy a seamless and secure login experience with Google authentication powered by NextAuth, keeping your account safe.
+
+- **📱 Fully Responsive Design**: Whether on a desktop or a smartphone, Promptopia ensures a fantastic user experience on all devices.
+
+- **🛠️ Clean Code Architecture & Reusability**: Built with an emphasis on maintainable code architecture and reusability, making it easy to enhance and expand in the future.
+
+## Screenshots
+
+### Home Page
+![Home Page](Screenshot%202024-10-08%20190241.png)
+
+### Profile Page
+![Profile Page](Screenshot%202024-10-08%20190313.png)
+
+🤸 **Quick Start**  
+Get your project up and running locally by following these steps:
+
+### Prerequisites
+Before you start, ensure you have the following installed on your machine:
+
+- **Git**
+- **Node.js**
+- **npm** (Node Package Manager)
+
+### Cloning the Repository
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/chandanmaheshwari753/Promptopia.git
+```
+
+### Installation
+Next, install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+### Set Up Environment Variables
+Create a new file named `.env` in the root of your project and add the following content:
+
+```plaintext
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=
+GOOGLE_ID=
+GOOGLE_CLIENT_SECRET=
+MONGODB_URI=
+```
+
+Make sure to replace the placeholder values with your actual credentials. You can obtain these credentials by signing up on the corresponding websites like Google Cloud Console, Cryptpool (for a random Auth Secret), and MongoDB.
+
+### Running the Project
+Finally, start the project with:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and go to **http://localhost:3000** to see your project in action!
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
